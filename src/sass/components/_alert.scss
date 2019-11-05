@@ -1,0 +1,29 @@
+.not-services{
+  margin: auto;
+  font-size: 1.6rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  min-height: 16em;
+  .alert-text{
+    color: var(--color-red);
+  }
+}
+.arrow {
+  position: relative;
+  display: inline-block;
+  margin: 1.4em 1em 1em 6em;
+  padding: 21px;
+  box-shadow: 10px -10px 0 0 var(--color-red) inset;
+  animation: jump-right 3s infinite;
+  @include respond(phone) {
+    animation: jump-top 3s infinite;
+  }
+}
+.arrow--right {
+  transform: rotate(225deg);
+  right: 25px;
+  @include respond(phone) {
+    transform: rotate(135deg);
+  }
+}

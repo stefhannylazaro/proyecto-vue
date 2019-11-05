@@ -1,0 +1,40 @@
+.container {
+    max-width: 124rem;
+    margin: 0 auto;
+    min-height: 50rem;
+}
+.services-view {
+    display: flex;
+    @include respond(phone){
+        flex-wrap: wrap;
+    };
+    &__left{
+        display: flex;
+        flex: 0 0 70%;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        @include respond(phone){
+            flex: 0 0 100% !important;
+            order: 2;
+        };
+        @include respond(tab-port){
+            flex: 0 0 60%;
+        };
+        .card{
+            margin: 3em 2.5em 0 0;
+            @include respond(phone){
+                margin: 1em auto;
+            };
+        }
+    }
+    &__right{
+        flex: 0 0 30%;
+        @include respond(phone){
+            flex: 0 0 100% !important;
+            order: 1;
+        };
+        @include respond(tab-port){
+            flex: 0 0 40%;
+        };
+    }
+}

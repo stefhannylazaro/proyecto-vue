@@ -1,0 +1,32 @@
+.nav{
+    background-color: var(--color-grey-1);
+    .nav-list{
+        display: flex;
+        @include respond(phone) {
+            justify-content: space-around;
+        }
+        &__item{
+            list-style: none;
+            padding: 1em 1.5em;
+            a{
+                color: var(--color-black-2);
+                font-size: 1.6rem;
+                text-decoration: none;
+                cursor: pointer;
+                @include respond(phone) {
+                    letter-spacing: .2rem;
+                    font-size: 2rem;
+                }
+                &:hover{
+                    color: var(--color-black-1);
+                }
+            }
+            &--active{
+                a{
+                    color: var(--color-black-1);
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}

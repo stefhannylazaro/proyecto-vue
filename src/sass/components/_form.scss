@@ -1,0 +1,62 @@
+.form-service{
+    border: 1px solid var(--color-grey-3);
+    border-radius: 3px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 3em;
+    &__title{
+        @include title;
+    }
+    &__group{
+        display: flex;
+        flex-direction: column;
+        padding-left: 2em;
+        margin-bottom: 1rem;
+        label{
+            display: inline-block;
+            margin-bottom: .5rem;
+            font-size: 1.6rem;
+        }
+        .form-box{
+            padding: .375rem .75rem;
+            font-size: 1.6rem;
+            line-height: 1.5;
+            color: var(--color-black-3);
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: .25rem;
+            transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+            width: 90%;
+            resize: none;
+            &--select{
+                height: calc(2.25rem + 11px);
+            }
+        }
+        .v-select{
+            width: 90%;
+            color: var(--color-black-3);
+            .dropdown-toggle{
+                font-size: 1.6rem;
+                color: var(--color-black-3);
+            }
+            ul{
+                font-size: 1.6rem;
+                color: var(--color-black-3);
+            }
+        }
+    }
+    &__buttons{
+        background-color:var(--color-grey-2);
+        padding: 2em;
+        display: flex;
+    }
+    .input-error{
+        .error{
+            color: var(--color-red);
+        }
+    }
+}
